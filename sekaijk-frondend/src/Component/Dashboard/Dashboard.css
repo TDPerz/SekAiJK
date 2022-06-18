@@ -1,0 +1,24 @@
+.logo-menu-dash{
+    fill:'#EDEDED';
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: block;
+    transition: .2s;
+}
+
+.logo-menu-dash:hover{
+    fill: #DA0037;
+}
+
+.trigger-dash-menu:hover {
+    color: #1890ff;
+}
+
+.site-layout-background{
+    background: #fff;
+}
+
+.menu-dash{
+    background-color: #171717;
+}
