@@ -8,7 +8,6 @@ authRoute.post('/login', async (req, res) => {
     console.log(req.body)
     const { username, password, remember } = req.body
     const foundUser = await User.login(username, password)
-    console.log(foundUser)
     if (foundUser.Token) {
         if (remember) {
             foundUser.Token = jwt.sign(foundUser.Token, process.env.SECRET_KEY)

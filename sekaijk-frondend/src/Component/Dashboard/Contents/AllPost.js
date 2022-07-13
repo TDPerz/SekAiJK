@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import 'antd';
 import './Allpost.css'
 import { List, Space, Avatar, Button, Divider, PageHeader, Input, Row, Col } from "antd";
-import { EditFilled, DeleteFilled, PlusOutlined, FileTextFilled, MenuUnfoldOutlined, MenuFoldOutlined, FileImageFilled, PlusCircleFilled } from "@ant-design/icons"
+import { EditFilled, DeleteFilled, PlusOutlined, UploadOutlined, FileTextFilled, MenuUnfoldOutlined, MenuFoldOutlined, FileImageFilled, PlusCircleFilled } from "@ant-design/icons"
 import { useNavigate } from "react-router-dom";
 
 const data = Array.from({
@@ -11,8 +11,6 @@ const data = Array.from({
     href: 'https://ant.design',
     title: `ant design part ${i}`,
     avatar: 'https://joeschmoe.io/api/v1/random',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team.',
     content:
         'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
 }));
@@ -33,7 +31,7 @@ export default function () {
                     </Col>
                     <Col span={2} offset={12}>
                         <Space align="end">
-                            <Button type="primary" onClick={()=> navigate('make')}>
+                            <Button type="primary" onClick={() => navigate('make')}>
                                 <PlusOutlined />
                                 Agregar
                             </Button>

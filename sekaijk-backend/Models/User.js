@@ -15,19 +15,15 @@ const Users = new mongo.Schema({
 
 Users.statics.login = async function( username, password){
     const foundUser = await this.findOne({username})
-    console.log(foundUser)
     if(foundUser){
         if (await bcrypt.compare(password, foundUser.password)){
-            console.log("Contraseña es correcta")
             const token = { user: foundUser.username, email: foundUser.email, role: foundUser.role, img: foundUser.img.url }
             return { Status:0, Mensaje :"Completado", Token: token }
         }
         else{
-            console.log("Contraseña es incorrecta")
             return { Status: -1, Mensaje: "Usuario o contraseña incorrecta" }
         }
     }else{
-        console.log("Usuario es incorrecto")
         return { Status: -1, Mensaje: "Usuario o contraseña incorrecta" }
     }
 }

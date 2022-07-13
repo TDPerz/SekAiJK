@@ -8,6 +8,7 @@ import Dashboard from './Component/Dashboard/Dashboard';
 import AllPost from './Component/Dashboard/Contents/AllPost';
 import CreatePost from './Component/Dashboard/Contents/CreatePost';
 import Authentic from './Component/Session/Authentic';
+import 'react-toastify/dist/ReactToastify.css';
 import { DataWebProvider } from './Component/Context/DataWebProvaider';
 
 function App() {

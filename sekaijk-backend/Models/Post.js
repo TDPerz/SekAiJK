@@ -6,6 +6,7 @@ const post = new mongo.Schema({
         url:String,
         public_id:String
     },
+    status: false,
     description:String,
     body:String,
     tags:[{
